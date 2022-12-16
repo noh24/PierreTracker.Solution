@@ -38,6 +38,11 @@ namespace PierreTracker.Models
       }
       return -1;
     }
+    public static Vendor GetVendor(int id)
+    {
+      int foundIndex = FindIndex(id);
+      return _instances[foundIndex];
+    }
   }
 }
 //vendor (people who bought)
