@@ -8,8 +8,8 @@
     <UpToDateCheckBuilt Include="wwwroot/css/input.css" Set="Css" />
     <UpToDateCheckBuilt Include="./../tailwind.config.js" Set="Css" />
   </ItemGroup>
-
+<!-- 
   <Target Name="Tailwind" BeforeTargets="Build">
     <Exec Command="npm run tw-build"/>
-  </Target>
+  </Target> -->
 </Project>
