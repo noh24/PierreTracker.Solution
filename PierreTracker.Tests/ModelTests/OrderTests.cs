@@ -40,5 +40,30 @@ namespace PierreTracker.Tests
       List<Order> orderList = new List<Order> { newOrder, newOrder2 };
       CollectionAssert.AreEqual(orderList, Order.GetAll());
     }
+    [TestMethod]
+    public void FindIndex_ReturnsCorrectIndexOfOrderById_Int()
+    {
+      Order newOrder = new Order("title", "description", "deliveryDate", 1);
+      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+      Assert.AreEqual(0, Order.FindIndex(1));
+      Assert.AreEqual(1, Order.FindIndex(2));
+    }
+    [TestMethod]
+    public void GetOrder_ReturnsCorrectOrder_Order()
+    {
+      Order newOrder = new Order("title", "description", "deliveryDate", 1);
+      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+      Assert.AreEqual(newOrder, Order.GetOrder(1));
+      Assert.AreEqual(newOrder2, Order.GetOrder(2));
+    }
+    [TestMethod]
+    public void DeleteOrder_RemovesCorrectOrderFromList_OrderList()
+    {
+      Order newOrder = new Order("title", "description", "deliveryDate", 1);
+      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+      List<Order> orderList = new List<Order> { newOrder };
+      Order.DeleteOrder(2);
+      CollectionAssert.AreEqual(orderList, Order.GetAll());
+    }
   }
 }
