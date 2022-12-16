@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace PierreTracker.Tests
 {
   [TestClass]
-  public class VendorTests :IDisposable
+  public class VendorTests : IDisposable
   {
     public void Dispose()
     {
@@ -35,6 +35,13 @@ namespace PierreTracker.Tests
       Vendor newVendor = new Vendor("name", "description");
       List<Vendor> expected = new List<Vendor> { newVendor };
       CollectionAssert.AreEqual(expected, Vendor.GetAll());
+    }
+    [TestMethod]
+    public void FindIndex_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      Vendor newVendor2 = new Vendor("name", "description");
+      Assert.AreEqual(1 , Vendor.FindIndex(2));
     }
   }
 }
