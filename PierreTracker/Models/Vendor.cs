@@ -10,6 +10,7 @@ namespace PierreTracker.Models
     public int Id { get; set; }
     private static int _highestVendorId = 0;
     private static List<Vendor> _instances = new List<Vendor> { };
+    public List<Order> Orders {get; set;}
 
     public Vendor(string name, string description)
     {
@@ -17,6 +18,7 @@ namespace PierreTracker.Models
       Description = description;
       Id = ++_highestVendorId;
       _instances.Add(this);
+      Orders = new List<Order> {};
     }
     public static void ClearAll()
     {
@@ -47,6 +49,10 @@ namespace PierreTracker.Models
     {
       int foundIndex = FindIndex(id);
       _instances.RemoveAt(foundIndex);
+    }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }
