@@ -5,8 +5,12 @@ using System.Collections.Generic;
 namespace PierreTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
     [TestMethod]
     public void OrderConstructor_ReturnsValidProperties_OrderProperties()
     {
@@ -19,6 +23,14 @@ namespace PierreTracker.Tests
       Assert.AreEqual(description, newOrder.Description);
       Assert.AreEqual(deliveryDate, newOrder.DeliveryDate);
       Assert.AreEqual(price, newOrder.Price);
+    }
+    [TestMethod]
+    public void GetId_ReturnsCorrectOrderId_Int()
+    {
+      Order newOrder = new Order("title", "description", "deliveryDate", 1);
+      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+      Assert.AreEqual(1, newOrder.Id);
+      Assert.AreEqual(2, newOrder2.Id);
     }
   }
 }
