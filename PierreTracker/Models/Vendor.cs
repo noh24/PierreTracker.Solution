@@ -43,6 +43,11 @@ namespace PierreTracker.Models
       int foundIndex = FindIndex(id);
       return _instances[foundIndex];
     }
+    public static void DeleteVendor(int id)
+    {
+      int foundIndex = FindIndex(id);
+      _instances.RemoveAt(foundIndex);
+    }
   }
 }
 //vendor (people who bought)
