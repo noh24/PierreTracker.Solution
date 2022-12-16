@@ -37,11 +37,19 @@ namespace PierreTracker.Tests
       CollectionAssert.AreEqual(expected, Vendor.GetAll());
     }
     [TestMethod]
-    public void FindIndex_ReturnsCorrectVendor_Vendor()
+    public void FindIndex_ReturnsCorrectIndex_Vendor()
     {
       Vendor newVendor = new Vendor("name", "description");
       Vendor newVendor2 = new Vendor("name", "description");
       Assert.AreEqual(1 , Vendor.FindIndex(2));
+    }
+    [TestMethod]
+    public void GetVendor_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      Vendor newVendor2 = new Vendor("name", "description");   
+      Assert.AreEqual(newVendor, Vendor.GetVendor(1));
+      Assert.AreEqual(newVendor2, Vendor.GetVendor(2));
     }
   }
 }
