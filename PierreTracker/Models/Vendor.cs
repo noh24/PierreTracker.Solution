@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 
@@ -16,16 +15,28 @@ namespace PierreTracker.Models
     {
       Name = name;
       Description = description;
-      Id = _highestVendorId++;
+      Id = ++_highestVendorId;
       _instances.Add(this);
     }
     public static void ClearAll()
     {
       _instances.Clear();
+      _highestVendorId = 0;
     }
     public static List<Vendor> GetAll()
     {
       return _instances;
+    }
+    public static int FindIndex(int id)
+    {
+      for (int i = 0; i < _instances.Count; i++)
+      {
+        if (_instances[i].Id == id)
+        {
+          return i;
+        }
+      }
+      return -1;
     }
   }
 }
