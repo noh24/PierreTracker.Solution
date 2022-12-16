@@ -2,19 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Word Puzzle</title>
-    <link 
+    <title>Pierre Tracker</title>
+    @* <link 
       rel="stylesheet" 
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-      crossorigin="anonymous"> 
+      crossorigin="anonymous">  *@
     <link rel="stylesheet" href="~/css/output.css">
-    <!-- navbar? -->
   </head>
   <body>
-    <div class="relative container mx-auto p-6 border">
+    <div class="relative container mx-auto bg-slate-400 p-6 border">
       @await Html.PartialAsync("Navbar")
-      <h1>Play Word Puzzle</h1>
+      <h1 class="text-center text-5xl">Vendor And Order Tracker</h1>
       @RenderBody()
       @* <!-- @await Html.PartialAsync("Footer") --> *@
     </div>
