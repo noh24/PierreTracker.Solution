@@ -13,8 +13,7 @@
   <body>
     <div class="relative container mx-auto bg-slate-200 p-6 border h-screen">
       @await Html.PartialAsync("Navbar")
-      <h1 class="text-center text-5xl my-20">Vendor And Order Tracker</h1>
-      <div class="flex justify-center items-center my-20">
+      <div class="container flex flex-col justify-center items-center my-10">
         @RenderBody()
       </div>
       @* <!-- @await Html.PartialAsync("Footer") --> *@
