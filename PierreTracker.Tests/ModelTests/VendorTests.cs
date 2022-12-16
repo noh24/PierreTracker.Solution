@@ -51,5 +51,14 @@ namespace PierreTracker.Tests
       Assert.AreEqual(newVendor, Vendor.GetVendor(1));
       Assert.AreEqual(newVendor2, Vendor.GetVendor(2));
     }
+    [TestMethod]
+    public void DeleteVendor_RemovesVendorFromList_VendorList()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      Vendor newVendor2 = new Vendor("name", "description"); 
+      List<Vendor> VendorList = new List<Vendor> { newVendor };
+      Vendor.DeleteVendor(2);
+      CollectionAssert.AreEqual(VendorList, Vendor.GetAll());
+    }
   }
 }
