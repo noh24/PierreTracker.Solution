@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+<form action="/vendors" method="post" class="flex flex-col justify-center items-end border border-slate-500 rounded-xl p-8">
+  <h2 class="text-3xl">Add New Vendors</h2>
+  <div class="flex my-5 gap-4">
+    <label for="name">Vendor Name: </label>
+    <input class="border rounded-xl text-center bg-white" type="text" id="name" name="name">
+  </div>
+  <div class="flex my-5 gap-4">
+    <label for="description">Vendor Description: </label>
+    <input class="border rounded-xl text-center" type="text" id="description" name="description">
+  </div>
+  <button class="border rounded-full px-3 py-2 mt-5 border-slate-500 self-center" type="submit">Add Vendor</button>
+</form>
