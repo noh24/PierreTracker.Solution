@@ -32,5 +32,13 @@ namespace PierreTracker.Tests
       Assert.AreEqual(1, newOrder.Id);
       Assert.AreEqual(2, newOrder2.Id);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllOrders_OrderList()
+    {
+      Order newOrder = new Order("title", "description", "deliveryDate", 1);
+      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+      List<Order> orderList = new List<Order> { newOrder, newOrder2 };
+      CollectionAssert.AreEqual(orderList, Order.GetAll());
+    }
   }
 }
