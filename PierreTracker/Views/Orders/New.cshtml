@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+<h1 class="text-center text-5xl my-10">Add New Orders To Vendor @Model.Name</h1>
+<form action="/vendors/@Model.Id/orders" method="post" class="flex flex-col justify-center items-end border border-slate-500 rounded-xl p-8">
+  <input type="hidden" id="vendorId" name="vendorId" value="@Model.Id">
+  <div class="flex my-5 gap-4">
+    <label for="title">Order Title: </label>
+    <input class="border rounded-xl text-center bg-white" type="text" id="title" name="title">
+  </div>
+  <div class="flex my-5 gap-4">
+    <label for="description">Order Description: </label>
+    <input class="border rounded-xl text-center" type="text" id="description" name="description">
+  </div>
+  <div class="flex my-5 gap-4">
+    <label for="date">Order Delivery Date: </label>
+    <input class="border rounded-xl text-center" type="date" id="date" name="date">
+  </div>
+  <div class="flex my-5 gap-4">
+    <label for="price">Order Price: </label>
+    <input class="border rounded-xl text-center" type="number" id="price" name="price">
+  </div>
+  <button class="border rounded-full px-3 py-2 mt-5 border-slate-500 self-center" type="submit">Add Order</button>
+</form>
