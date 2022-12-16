@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace WordPuzzle
+namespace PierreTracker
 {
   class Program
   {
@@ -15,7 +15,7 @@ namespace WordPuzzle
 
       // app.UseDeveloperExceptionPage();
       app.UseHttpsRedirection();
-
+      app.UseStaticFiles();
       app.UseRouting();
 
       app.MapControllerRoute(
