@@ -1,5 +1,5 @@
 {
-  "name": "word-puzzle.solution",
+  "name": "pierre-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noh24/Word-Puzzle.Solution.git"
+    "url": "git+https://github.com/noh24/PierreTracker.Solution.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/noh24/Word-Puzzle.Solution/issues"
+    "url": "https://github.com/noh24/PierreTracker.Solution/issues"
   },
-  "homepage": "https://github.com/noh24/Word-Puzzle.Solution#readme",
+  "homepage": "https://github.com/noh24/PierreTracker.Solution#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   }
