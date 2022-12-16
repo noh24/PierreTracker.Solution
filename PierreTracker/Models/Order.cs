@@ -10,6 +10,7 @@ namespace PierreTracker.Models
     public int Price {get;set;}
     public int Id {get;set;}
     private static int _highestOrderId = 0;
+    private static List<Order> _instances = new List<Order> {};
     public Order(string title, string description, string deliveryDate, int price)
     {
       Title = title;
@@ -17,10 +18,16 @@ namespace PierreTracker.Models
       DeliveryDate = deliveryDate;
       Price = price;
       Id = ++_highestOrderId;
+      _instances.Add(this);
     }
     public static void ClearAll()
     {
       _highestOrderId = 0;
+      _instances.Clear();
+    }
+    public static List<Order> GetAll()
+    {
+      return _instances;
     }
   }
 }
