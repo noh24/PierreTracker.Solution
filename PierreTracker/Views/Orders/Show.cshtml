@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+@using PierreTracker.Models;
+@await Html.PartialAsync("SecondNavbar")
+<h1 class="text-center text-5xl my-10">Order @Model["order"].Title for Vendor @Model["vendor"].Name</h1>
+<div class="container flex flex-col justify-center items-center">
+  <section class="flex flex-col items-center justify-center p-8 gap-3 text-xl divide-y divide-dashed divide-slate-500">
+    <p>Order Title: @Model["order"].Title</p>
+    <p>Order Description: @Model["order"].Description</p>
+    <p>Order Delivery Date: @Model["order"].DeliveryDate</p>
+    <p>Order Price: @Model["order"].Price</p>
+  </section>
+</div>
