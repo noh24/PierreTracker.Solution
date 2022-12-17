@@ -2,7 +2,8 @@
   Layout = "_Layout";
 }
 @using PierreTracker.Models;
-<h1 class="text-center text-5xl my-10 hover:text-slate-600"><a href='/vendors/@Model["vendor"].Id'>Vendor @Model["vendor"].Name</a></h1>
+@await Html.PartialAsync("SecondNavbar")
+<h1 class="text-center text-5xl my-10">Vendor @Model["vendor"].Name</h1>
 <div class="container flex flex-col justify-center items-center">
   @if (@Model["orders"].Count == 0)
   {
@@ -14,7 +15,4 @@
       <div><a class="text-2xl" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></div>
     }
   </section>
-  <span class="border rounded-full border-slate-500 px-3 py-2">
-    <a href='/vendors/@Model["vendor"].Id/orders/new'>Add Orders</a>
-  </span>
 </div>
