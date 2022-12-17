@@ -2,9 +2,8 @@
   Layout = "_Layout";
 }
 @using PierreTracker.Models;
-@await Html.PartialAsync("SecondNavbar")
-<h1 class="text-center text-5xl my-10">Vendor @Model["vendor"].Name</h1>
-<div class="container flex flex-col justify-center items-center">
+<h1 class="text-center text-5xl py-10 w-full bg-slate-100">Vendor @Model["vendor"].Name</h1>
+<div class="container flex flex-col justify-center items-center border border-slate-100 rounded-xl bg-slate-100 mt-10 w-1/3 shadow-lg">
   @if (@Model["orders"].Count == 0)
   {
     <p>This vendor has no orders currently.</p>
@@ -12,7 +11,8 @@
   <section class="flex flex-col items-center justify-center p-8 gap-3 divide-y divide-dashed divide-slate-500">
     @foreach (Order order in @Model["orders"])
     {
-      <div><a class="text-2xl" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></div>
+      <div><a class="text-2xl hover:text-slate-400 active:text-slate-400" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></div>
     }
   </section>
+@await Html.PartialAsync("SecondNavbar")
 </div>

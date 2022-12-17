@@ -1,24 +1,25 @@
 @{
   Layout = "_Layout";
 }
-<h1 class="text-center text-5xl my-10">Add New Orders To Vendor @Model.Name</h1>
-<form action="/vendors/@Model.Id/orders" method="post" class="flex flex-col justify-center items-end border border-slate-500 rounded-xl p-8">
+<h1 class="text-center text-5xl py-10 w-full bg-slate-100">Add New Orders To Vendor @Model.Name</h1>
+<form action="/vendors/@Model.Id/orders" method="post" class="flex flex-col justify-center items-end mt-10 border bg-slate-100 border-slate-200 rounded-xl p-8 shadow-xl">
+  <h3 class="self-center text-3xl font-medium">Enter Order Information</h3>
   <input type="hidden" id="vendorId" name="vendorId" value="@Model.Id">
   <div class="flex my-5 gap-4">
-    <label for="title">Order Title: </label>
-    <input class="border rounded-xl text-center bg-white" type="text" id="title" name="title">
+    <label class="text-lg" for="title">Order Title: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="text" id="title" name="title">
   </div>
   <div class="flex my-5 gap-4">
-    <label for="description">Order Description: </label>
-    <input class="border rounded-xl text-center" type="text" id="description" name="description">
+    <label class="text-lg" for="description">Order Description: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="text" id="description" name="description">
   </div>
   <div class="flex my-5 gap-4">
-    <label for="date">Order Delivery Date: </label>
-    <input class="border rounded-xl text-center" type="date" id="date" name="date">
+    <label class="text-lg" for="date">Order Delivery Date: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="date" id="date" name="date">
   </div>
   <div class="flex my-5 gap-4">
-    <label for="price">Order Price: </label>
-    <input class="border rounded-xl text-center" type="number" id="price" name="price">
+    <label class="text-lg" for="price">Order Price: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="number" id="price" name="price">
   </div>
-  <button class="border rounded-full px-3 py-2 mt-5 border-slate-500 self-center" type="submit">Add Order</button>
+  <button class=" text-lg border rounded-full px-3 py-1 mt-5 bg-blue-50 hover:bg-blue-100 border-slate-200 self-center shadow-md" type="submit">Add Order</button>
 </form>

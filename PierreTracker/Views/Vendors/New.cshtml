@@ -1,15 +1,18 @@
 @{
   Layout = "_Layout";
 }
-<h1 class="text-center text-5xl my-10">Add New Vendors</h1>
-<form action="/vendors" method="post" class="flex flex-col justify-center items-end border border-slate-500 rounded-xl p-8">
+<h1 class="text-center text-5xl py-10 w-full bg-slate-100">Add New Vendors</h1>
+<form action="/vendors" method="post" class="flex flex-col justify-center items-end mt-10 border bg-slate-100 border-slate-200 rounded-xl p-8 shadow-xl">
+  <h3 class="self-center text-3xl font-medium">Enter Vendor Information</h3>
   <div class="flex my-5 gap-4">
-    <label for="name">Vendor Name: </label>
-    <input class="border rounded-xl text-center bg-white" type="text" id="name" name="name">
+    <label class="text-lg" for="name">Vendor Name: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="text" id="name" name="name">
   </div>
   <div class="flex my-5 gap-4">
-    <label for="description">Vendor Description: </label>
-    <input class="border rounded-xl text-center" type="text" id="description" name="description">
+    <label class="text-lg" for="description">Vendor Description: </label>
+    <input class="border rounded-xl text-center border-slate-300 shadow-sm hover:border-slate-400 outline-slate-300 text-slate-500" type="text" id="description" name="description">
   </div>
-  <button class="border rounded-full px-3 py-2 mt-5 border-slate-500 self-center" type="submit">Add Vendor</button>
+  <div class="self-center">
+    <button class="text-lg border rounded-full px-3 py-1 mt-5 bg-blue-50 hover:bg-blue-100 border-slate-200 shadow-md type="submit">Add Vendor</button>
+  </div>
 </form>

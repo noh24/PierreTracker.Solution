@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="~/css/output.css">
   </head>
   <body>
-    <div class="relative container mx-auto bg-slate-200 p-6 border h-screen">
+    <div class="relative container mx-auto bg-slate-100 border h-screen">
       @await Html.PartialAsync("Navbar")
-      <div class="container flex flex-col justify-center items-center my-10">
+      <div class="container flex flex-col bg-blue-200 pb-16 items-center w-full">
         @RenderBody()
       </div>
       @* <!-- @await Html.PartialAsync("Footer") --> *@
