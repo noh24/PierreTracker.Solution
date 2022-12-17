@@ -48,7 +48,10 @@ namespace PierreTracker.Models
     public static void DeleteVendor(int id)
     {
       int foundIndex = FindIndex(id);
-      _instances.RemoveAt(foundIndex);
+      if (foundIndex != -1)
+      {
+        _instances.RemoveAt(foundIndex);
+      }
     }
     public void AddOrder(Order order)
     {
