@@ -45,11 +45,14 @@ namespace PierreTracker.Models
       int foundIndex = FindIndex(id);
       return _instances[foundIndex];
     }
-    public static void DeleteOrder(int id)
-    {
-      int foundIndex = FindIndex(id);
-      _instances.RemoveAt(foundIndex);
-    }
+    // public static void DeleteOrder(int id)
+    // {
+    //   int foundIndex = FindIndex(id);
+    //   if (foundIndex != -1)
+    //   {
+    //     _instances.RemoveAt(foundIndex);
+    //   }
+    // }
   }
 }
 
