@@ -44,5 +44,11 @@ namespace PierreTracker.Controllers
       model.Add("orders", selectedVendor.Orders);
       return View("Show", model);
     }
+    [HttpPost("/vendors/delete")]
+    public ActionResult Delete(int id)
+    {
+      Vendor.DeleteVendor(id);
+      return RedirectToAction("Index");
+    }
   }
 }
