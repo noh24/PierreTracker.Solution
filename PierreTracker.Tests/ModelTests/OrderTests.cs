@@ -56,14 +56,14 @@ namespace PierreTracker.Tests
       Assert.AreEqual(newOrder, Order.GetOrder(1));
       Assert.AreEqual(newOrder2, Order.GetOrder(2));
     }
-    [TestMethod]
-    public void DeleteOrder_RemovesCorrectOrderFromList_OrderList()
-    {
-      Order newOrder = new Order("title", "description", "deliveryDate", 1);
-      Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
-      List<Order> orderList = new List<Order> { newOrder };
-      Order.DeleteOrder(2);
-      CollectionAssert.AreEqual(orderList, Order.GetAll());
-    }
+    // [TestMethod]
+    // public void DeleteOrder_RemovesCorrectOrderFromList_OrderList()
+    // {
+    //   Order newOrder = new Order("title", "description", "deliveryDate", 1);
+    //   Order newOrder2 = new Order("title", "description", "deliveryDate", 1);
+    //   List<Order> orderList = new List<Order> { newOrder };
+    //   Order.DeleteOrder(2);
+    //   CollectionAssert.AreEqual(orderList, Order.GetAll());
+    // }
   }
 }
